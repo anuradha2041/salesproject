@@ -2,7 +2,7 @@ version: '3.9'
 services:
   mysql:
     image: mysql:latest
-    container_name: mysql_container2
+    container_name: saleshistory_container
     environment:
       MYSQL_DATABASE: anu_database 
       MYSQL_USER: admin
@@ -15,7 +15,7 @@ services:
 
   springboot:
     build: .
-    container_name: saleshistory_app
+    container_name: saleshistory
     ports:
       - "8978:8978"
     depends_on:
